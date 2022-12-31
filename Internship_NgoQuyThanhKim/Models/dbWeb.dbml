@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="VNR_InternShip" Class="dbWebDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-U3QEG0H;Initial Catalog=VNR_InternShip;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="VNR_InternShipConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.KhoaHoc" Member="KhoaHocs">
+    <Type Name="KhoaHoc">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenKhoaHoc" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="KhoaHoc_MonHoc" Member="MonHocs" ThisKey="ID" OtherKey="KhoaHocID" Type="MonHoc" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MonHoc" Member="MonHocs">
+    <Type Name="MonHoc">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenMonHoc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KhoaHocID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="KhoaHoc_MonHoc" Member="KhoaHoc" ThisKey="KhoaHocID" OtherKey="ID" Type="KhoaHoc" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

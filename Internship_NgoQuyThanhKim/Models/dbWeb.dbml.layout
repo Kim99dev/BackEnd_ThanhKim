@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbWeb">
+  <DataContextMoniker Name="/dbWebDataContext" />
+  <nestedChildShapes>
+    <classShape Id="142f618b-8bb4-42c9-842e-eb20efd106a1" absoluteBounds="0.75, 1.125, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/dbWebDataContext/KhoaHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03dcf858-860a-4aa0-82a3-18756ee30d94" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6581c399-da0d-4e21-b2fa-6606ea5b7c12" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbWebDataContext/MonHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="003b1e6e-1c1c-4193-906a-7331b2602099" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbWebDataContext/KhoaHoc/KhoaHoc_MonHoc" />
+      <nodes>
+        <classShapeMoniker Id="142f618b-8bb4-42c9-842e-eb20efd106a1" />
+        <classShapeMoniker Id="6581c399-da0d-4e21-b2fa-6606ea5b7c12" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

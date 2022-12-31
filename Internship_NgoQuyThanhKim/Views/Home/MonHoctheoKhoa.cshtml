@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Internship_NgoQuyThanhKim.Models.MonHoc>
+
+@{
+    ViewBag.Title = "MonHoctheoKhoa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Khóa học: @Session["KhoaHoc"].ToString()</h1>
+<hr class="new5" />
+<ol>
+    @foreach (var mh in Model)
+    {
+
+        <li class=" col-md-6">
+            <a>
+                @mh.TenMonHoc;
+            </a>
+        </li>
+    }
+</ol>

@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Internship_NgoQuyThanhKim.Models.KhoaHoc>
+<h1>Khóa học</h1>
+
+<hr class="new5" />
+@foreach(var khoahoc in Model)
+{
+    <li>
+        <a href="@Url.Action("MonHoctheoKhoa","Home", new { id = khoahoc.ID })">@khoahoc.TenKhoaHoc</a>
+    </li>
+}

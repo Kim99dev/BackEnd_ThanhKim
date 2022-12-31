@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Các môn học</h1>
+<hr class="new5" />
+<ol>
+@foreach(var mh in Model)
+{    
+    <li class=" col-md-6">
+        <a>
+            @mh.TenMonHoc;
+        </a>
+    </li>
+}
+</ol>
